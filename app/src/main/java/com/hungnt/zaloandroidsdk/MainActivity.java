@@ -10,16 +10,19 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
 
+import com.hungnt.zaloandroidsdk.databinding.ActivityMainBinding;
+
 import java.security.MessageDigest;
 
 public class MainActivity extends AppCompatActivity {
-
+    ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
+        setContentView(binding.getRoot());
         getBase64StringSha1(getApplicationContext());
     }
-
     public static void getBase64StringSha1(Context ctx)
     {
         try {
@@ -36,6 +39,6 @@ public class MainActivity extends AppCompatActivity {
         {
             Log.e("LOI_SHA",ex.toString());
         }
-        }
+    }
 
 }
