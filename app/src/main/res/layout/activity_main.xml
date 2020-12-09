@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C5C1C1"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -11,5 +12,5 @@
         android:id="@+id/btnloginwithzalo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login With Zalo" />
+        android:text="@string/login_with_zalo" />
 </LinearLayout>
