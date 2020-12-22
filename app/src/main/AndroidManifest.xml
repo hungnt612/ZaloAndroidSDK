@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ZaloAndroidSDK">
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".PostActivity"></activity>
+        <activity android:name=".ProfileActivity" />
 
         <meta-data
             android:name="com.zing.zalo.zalosdk.appID"

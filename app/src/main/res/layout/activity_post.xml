@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PostActivity">
+
+    <TextView
+        android:id="@+id/txtCreatePost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#03A9F4"
+        android:text="Đăng Bài Viết Lên Tường"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Liên kết chia sẻ: "
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edittxtLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Link ( bỏ trống nếu không có )"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nội Dung:"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/multitxtContent"
+        android:layout_width="match_parent"
+        android:layout_height="600px"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnCreatePost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đăng Bài" />
+
+    <Button
+        android:id="@+id/btnExitCreatePost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thoat " />
+</LinearLayout>

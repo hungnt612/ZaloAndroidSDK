@@ -1,11 +1,15 @@
 package com.hungnt.zaloandroidsdk;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.hungnt.zaloandroidsdk.databinding.ActivityProfileBinding;
 import com.squareup.picasso.Picasso;
@@ -23,10 +27,11 @@ public class ProfileActivity extends AppCompatActivity {
         binding=ActivityProfileBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         ZaloSDK.Instance.getProfile(ProfileActivity.this,apiCallback,filters);
-        addEvents();
+        logOut();
+
     }
 
-    private void addEvents() {
+    private void logOut() {
         binding.btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,4 +62,21 @@ public class ProfileActivity extends AppCompatActivity {
 
 
     String []filters={"id","name","picture.type(large)"};
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.function_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId()==R.id.actionCreatePost)
+        {
+            Toast.makeText(ProfileActivity.this,"Ban vua chon dang bai viet",Toast.LENGTH_LONG).show();
+            Intent intent=new Intent(ProfileActivity.this,PostActivity.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
