@@ -45,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
             else {
                 onLoginSuccess();
                 Log.d("Login_Success", "dang nhap thanh cong");
+                Intent intent= new Intent(MainActivity.this, ProfileActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
             }
         }
 
